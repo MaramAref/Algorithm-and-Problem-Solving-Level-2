@@ -41,15 +41,21 @@ void PrintArry(int arr[100],int Length){
 	}
 	
 }
-void CopyInArray(int copyarr[100],int arr[100],int Length){
-	for(int counter=0;counter<Length;counter++){
-		if(PrimeNotPrimeChecker(arr[counter]==enPimeNotPrime::prime))
-		copyarr[counter]=arr[counter];
-	}
+void CopyInArray(int copyarr[100], int arr[100], int Length, int &arr2Length) {
+    int i = 0;
+    for (int counter = 0; counter < Length; counter++) {
+        if (PrimeNotPrimeChecker(arr[counter]) == enPimeNotPrime::prime) {
+            copyarr[i] = arr[counter];
+            i++;
+        }
+    }
+    arr2Length = i;
 }
+
 
 int  main(){
 	srand((unsigned)time(NULL));
+	int arr2Length=0;
 	 int arr[100];
 	 int copyarr[100];
 	int Length= ReadPositiveNumber("Enter number of elements: ");
@@ -57,7 +63,7 @@ int  main(){
 	cout << "\nArray Elements : "<<endl;
 	PrintArry(arr,Length);
 	cout<<"Prime Number in Array 2: "<<"\n";
-	CopyInArray(copyarr,arr,Length);
-	PrintArry(copyarr,Length);
+	CopyInArray(copyarr,arr,Length,arr2Length);
+	PrintArry(copyarr,arr2Length);
 	return 0;
 }
