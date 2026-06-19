@@ -1,6 +1,6 @@
 # Algorithm-and-Problem-Solving-Level-2
 
-This repository contains my C++ solutions for Level 2 algorithmic problems. The focus of this project is to strengthen problem-solving skills through working with matrices, arrays, and more advanced programming concepts.
+This repository contains my C++ solutions for Level 2 algorithmic problems. The focus is to strengthen problem-solving skills through working with matrices, arrays, and more advanced programming concepts.
 
 📌 Core Practices Applied
 
